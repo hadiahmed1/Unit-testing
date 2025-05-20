@@ -1,7 +1,7 @@
-import { ReservationsDataAccess } from "../../../../../../../app/server_app/data/ReservationsDataAccess";
-import { DataBase } from "../../../../../../../app/server_app/data/DataBase";
-import * as IdGenerator from '../../../../../../../app/server_app/data/IdGenerator';
-import { Reservation } from "../../../../../../../app/server_app/model/ReservationModel";
+import { ReservationsDataAccess } from "../../../app/server_app/data/ReservationsDataAccess";
+import { DataBase } from "../../../app/server_app/data/DataBase";
+import * as IdGenerator from '../../../app/server_app/data/IdGenerator';
+import { Reservation } from "../../../app/server_app/model/ReservationModel";
 
 const mockInsert = jest.fn();
 const mockGetBy = jest.fn();
@@ -9,7 +9,7 @@ const mockUpdate = jest.fn();
 const mockDelete = jest.fn();
 const mockGetAllElements = jest.fn();
 
-jest.mock('../../../../../../../app/server_app/data/DataBase', () => {
+jest.mock('../../../app/server_app/data/DataBase', () => {
     return {
         DataBase: jest.fn().mockImplementation(() => {
             return {
